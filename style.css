@@ -1,0 +1,589 @@
+/* style.css — профессиональный профиль для Сани Агеева */
+/* Сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fc;
+    color: #1a2634;
+    line-height: 1.5;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Фоновые декоративные элементы для премиум-ощущения */
+.bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.orb-1 {
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(66,153,225,0.3) 0%, rgba(66,153,225,0) 70%);
+    top: -10vh;
+    left: -10vw;
+}
+
+.orb-2 {
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(128,90,240,0.25) 0%, rgba(128,90,240,0) 70%);
+    bottom: -20vh;
+    right: -15vw;
+}
+
+.grid-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(200,212,230,0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,212,230,0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* ========== Шапка профиля ========== */
+.profile-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 2rem;
+    padding: 2rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 35px -12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.7);
+}
+
+.avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, #2b3b4e, #1f2c38);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', monospace;
+    color: white;
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+    border: 3px solid white;
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    background: #eef2ff;
+    padding: 0.3rem 0.9rem;
+    border-radius: 40px;
+    font-weight: 500;
+    color: #1f6392;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-badge i {
+    font-size: 0.55rem;
+    color: #10b981;
+}
+
+.name-section h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #1f2f3c, #2b4f6e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2c5a7a;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: #5b6e8c;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1.8rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #1f6392;
+    color: white;
+    box-shadow: 0 4px 10px rgba(31,99,146,0.25);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0f4b6e;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(31,99,146,0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #cbd5e1;
+    color: #2c3e50;
+}
+
+.btn-outline:hover {
+    background: #f0f4fa;
+    border-color: #1f6392;
+    transform: translateY(-2px);
+}
+
+/* ========== Био блок ========== */
+.bio-section {
+    margin-bottom: 2rem;
+}
+
+.bio-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    border: 1px solid #edf2f7;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: #2d3e50;
+    font-weight: 450;
+}
+
+.quote-icon {
+    color: #1f6392;
+    opacity: 0.6;
+    margin-right: 8px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* ========== Грид макет ========== */
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Общие стили для карточек */
+.card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.4rem 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+    border: 1px solid #eef2f9;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #eff3fa;
+    padding-bottom: 0.9rem;
+    margin-bottom: 1.3rem;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    color: #1f6392;
+    background: #eef3fc;
+    padding: 0.5rem;
+    border-radius: 14px;
+}
+
+.card-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: #1a2c3c;
+}
+
+/* Таймлайн опыта */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.2rem;
+    position: relative;
+}
+
+.timeline-marker {
+    min-width: 12px;
+    height: 12px;
+    background: #1f6392;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    position: relative;
+    box-shadow: 0 0 0 4px rgba(31,99,146,0.2);
+}
+
+.timeline-item:not(:last-child) .timeline-marker::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    width: 2px;
+    height: calc(100% + 1.2rem);
+    background: #e2e8f0;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.company {
+    font-weight: 500;
+    color: #1f6392;
+    font-size: 0.9rem;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: #7c8ea0;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+}
+
+.timeline-content ul {
+    padding-left: 1.2rem;
+    list-style: none;
+}
+
+.timeline-content li {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    color: #2e445e;
+    position: relative;
+}
+
+.timeline-content li::before {
+    content: "—";
+    position: absolute;
+    left: -1.1rem;
+    color: #1f6392;
+    opacity: 0.7;
+}
+
+/* Образование */
+.edu-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    align-items: flex-start;
+}
+
+.edu-icon {
+    background: #f3f6fc;
+    border-radius: 14px;
+    padding: 0.6rem;
+    line-height: 1;
+    color: #1f6392;
+}
+
+.edu-item h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.edu-item p {
+    font-size: 0.8rem;
+    color: #5d7184;
+}
+
+/* Скиллы (правый блок) */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0.3rem;
+}
+
+.skill-tag {
+    background: #f0f4fe;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1f4e73;
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    background: #e2eafc;
+    transform: translateY(-2px);
+}
+
+/* Статистика */
+.stats-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+    background: #fafcff;
+    padding: 0.7rem;
+    border-radius: 1.2rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk', monospace;
+    background: linear-gradient(135deg, #1f6392, #4098c9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #5c6f87;
+}
+
+/* Контакты */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #2e5a7f;
+    font-size: 0.9rem;
+    transition: 0.2s;
+    font-weight: 500;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #edf2f9;
+}
+
+.contact-link i {
+    width: 24px;
+    color: #1f6392;
+    font-size: 1.1rem;
+}
+
+.contact-link:hover {
+    color: #0f4668;
+    transform: translateX(4px);
+}
+
+.availability {
+    background: #eef6f0;
+    border-radius: 40px;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2b6e3c;
+}
+
+.availability i {
+    margin-right: 6px;
+}
+
+/* Языки */
+.lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #ecf3f8;
+}
+
+.lang-level {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.level-native, .level-fluent, .level-intermediate {
+    background: #eef2fa;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+}
+
+.level-native { color: #1a6d2f; background: #e4f5e8; }
+.level-fluent { color: #1f6392; background: #e1edfc; }
+.level-intermediate { color: #8b6b2c; background: #fcf3df; }
+
+/* Блок с отзывом */
+.testimonial {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card {
+    background: linear-gradient(105deg, #ffffff 0%, #fefefe 100%);
+    padding: 1.8rem 2.2rem;
+    position: relative;
+    border-left: 6px solid #1f6392;
+}
+
+.testimonial-quote {
+    font-size: 2rem;
+    color: #b9d2f0;
+    float: right;
+    margin-left: 1rem;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #2a4359;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #1c4c70;
+    border-top: 1px solid #ecf3f9;
+    padding-top: 0.8rem;
+    display: inline-block;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    font-size: 0.75rem;
+    color: #6c819a;
+    border-top: 1px solid #e2edf7;
+}
+
+.footer-icons {
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* Адаптивность */
+@media (max-width: 950px) {
+    .grid-main {
+        grid-template-columns: 1fr;
+    }
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .contact-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    .name-section h1 {
+        font-size: 2rem;
+    }
+    .stats-flex {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    .card {
+        padding: 1rem 1.2rem;
+    }
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .timeline-marker::after {
+        display: none;
+    }
+    .skills-grid {
+        justify-content: center;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    .bio-card {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
